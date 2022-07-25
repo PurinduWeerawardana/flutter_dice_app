@@ -30,20 +30,22 @@ class _DicePageState extends State<DicePage> {
       child: Row(
         children: [
           Expanded(
-            child: FlatButton(
+            child: TextButton(
               onPressed: () {
                 setState(() {
                   leftdice = Random().nextInt(6) + 1;
+                  rightdice = Random().nextInt(6) + 1;
                 });
               },
               child: Image.asset('images/dice$leftdice.png'),
             ),
           ),
           Expanded(
-            child: FlatButton(
+            child: TextButton(
               onPressed: () {
                 setState(() {
                   rightdice = Random().nextInt(6) + 1;
+                  leftdice = Random().nextInt(6) + 1;
                 });
               },
               child: Image.asset('images/dice$rightdice.png'),
